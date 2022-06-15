@@ -87,11 +87,11 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="administrador/login.html">prueba</a>
+            <a class="nav-link" href="../productos/formRegistrar.php">prueba</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="consultas.php">Consultar</a>
+            <a class="nav-link active" href="property-grid.html">Consultar</a>
           </li>
 
           <li class="nav-item">
@@ -122,53 +122,58 @@
   <!-- nav-->
 
   <!--contenido-->
-  <div class="contenido">
-    <div class="formRegistro">
-      <!--Titulos-->
-      <div class="space">
-      </div>
 
-      <!--Formularios para registrar-->
 
-      <form action="altas.php" method="post" id="altaProductos" enctype="multipart/form-data">
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Nombre</label>
-          <input type="text" class="form-control" required name="nombreProducto" id="nombreProducto" placeholder="Escriba el nombre del producto...">
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Modelo</label>
-          <input type="text" class="form-control" required name="modeloProducto" id="modeloProducto" placeholder="Escriba el modelo del producto...">
-          <br>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Descripcion</label>
-            <textarea class="form-control" required name="descripcionProducto" id="descripcionProducto" rows="3"></textarea>
-          </div>
-          <br>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Precio</label>
-            <input type="number" class="form-control" required name="precioProducto" id="precioProducto" placeholder="Escriba el precio del producto...">
-            <br>
-          </div>
-          <br>
-          <label for="exampleFormControlInput1">Seleccionar imagen</label>
-          <br><br>
-          <form>
-            <div class="form-group">
-              <input type="file" class="form-control-file" id="imagen" required name="imagen">
+  <?php
+  require_once("../db/conexion.php");
+
+
+  $result = mysqli_query($link, "SELECT * FROM productos");
+
+  echo"
+  <div class='contenido'>
+  <div class='row row-cols-1 row-cols-md-3 g-4'>
+
+  ";
+
+  while (($row= mysqli_fetch_array($result)) != NULL) {
+    $id_pro = $row['id'];
+    $varNombre = $row['nombre'];
+    $varModelo = $row['modelo'];
+    $varDescripcion = $row['descripcion'];
+    $varPrecio = $row['precio'];
+    $varImagen = $row['imagen'];
+    //data:image/jpg;img,echo img_encode($varImagen);
+
+    echo "
+    <!--contenido-->
+
+
+        <div class='col'>
+          <div class='card h-100'>
+            <img src= '' class='card-img-top'>
+            <div class='card-body'>
+              <h5 class='card-title'>$varNombre</h5>
+              <p class='card-text'>$varModelo</p>
+              <p class='card-text'>$varDescripcion</p>
             </div>
-          </form>
+            <div class='card-footer'>
+              <small class='text-muted'>$varPrecio</small>
+            </div>
+          </div>
+        </div>
 
-          <div class="msgError"></div>
-          <br><br>
-          <center>
-            <button type="submit" class="btn btn-success btn-lg btn-block" value="save" onclick="verificar();">Guardar</button>
-          </center>
-      </form>
-    </div>
+
+    ";
+  }
+
+  echo"
   </div>
   </div>
-  </div>
+  
+  ";
+
+  ?>
 
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

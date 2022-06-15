@@ -2,19 +2,19 @@
 
 require_once ("../db/conexion.php");
 
-$nombre = $_POST['nombre'];
-$modelo = $_POST['modelo'];
-$descripcion= $_POST['descripcion'];
-$precio = $_POST['precio'];
-$imagen = $_POST['imagen'];
+$varNombre = $_POST['nombreProducto'];
+$varModelo = $_POST['modeloProducto'];
+$varDescripcion= $_POST['descripcionProducto'];
+$varPrecio = $_POST['precioProducto'];
+$varImagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
-  mysqli_query($link, "INSERT INTO productos(nombre, modelo, descripcion, precio, imagen) VALUES ('$nombre', '$modelo', '$descripcion','$precio', '$imagen' )");
+  mysqli_query($link, "INSERT INTO productos(nombre, modelo, descripcion, precio, imagen) VALUES ('$varNombre', '$varModelo', '$varDescripcion','$varPrecio', '$varImagen' )");
   echo "
-   ?>
+?>
  
 <script>
     if(confirm(\"¿Desea realizar un nuevo registro?\")){
-                window.location.href='registrar.php';
+                window.location.href='formRegistrar.php';
                 }else{
                 window.location.href='../paginas/productos.html';
                 }
