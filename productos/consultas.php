@@ -61,7 +61,7 @@
             </div>
           </div>
           <div class="col-md-12">
-            <button type="submit" class="btn btn-b">Buscar</button>
+            <button type="submit" class="btn btn-b" name="">Buscar</button>
           </div>
         </div>
       </form>
@@ -83,7 +83,7 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link " href="../index.html">Home</a>
+            <a class="nav-link " href="../index.php">Home</a>
           </li>
 
           <li class="nav-item">
@@ -123,8 +123,8 @@
 
   <!--contenido-->
 
-
   <?php
+  
   require_once("../db/conexion.php");
 
 
@@ -145,13 +145,15 @@
     $varImagen = $row['imagen'];
     //data:image/jpg;img,echo img_encode($varImagen);
 
+    //estructura de imagenes
+    //echo '<img src="data:image/jpg;base64,'.base64_encode($varImagen).'"/>';
     echo "
     <!--contenido-->
 
 
         <div class='col'>
           <div class='card h-100'>
-            <img src= '' class='card-img-top'>
+            <img src= 'data:image/jpg;base64,".base64_encode($varImagen)."' class='card-img-top'>
             <div class='card-body'>
               <h5 class='card-title'>$varNombre</h5>
               <p class='card-text'>$varModelo</p>
@@ -161,7 +163,12 @@
               <small class='text-muted'>$varPrecio</small>
             </div>
           </div>
+          <center>
+          <a href='modificar.php?id_pro=$id_pro'><button type='button' class='btn btn-primary'>Modificar</button></a>
+          <a onClick='confirmar($id_pro)'><button type='button' class='btn btn-danger'>Eliminar</button></a>
+          </center>
         </div>
+
 
 
     ";
@@ -170,7 +177,6 @@
   echo"
   </div>
   </div>
-  
   ";
 
   ?>
@@ -183,8 +189,7 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/funciones.js"></script>
-
+  <script src="../assets/javascript/funciones.js"></script>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
