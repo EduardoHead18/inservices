@@ -139,7 +139,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Acerca de</a>
+            <a class="nav-link" href="index.php">Acerca de</a>
           </li>
 
 
