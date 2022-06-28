@@ -40,5 +40,16 @@ height: 100%;
 }
 
 .color-b {
+<<<<<<< HEAD
     color: rgb(94, 49, 216) !important;  
+=======
+    color: rgb(216, 49, 160) !important;  
+}
+
+.btn.btn-b-n {
+    background-color: #15b0e4 !important;
+    color: #ffffff;
+    border-radius: 0;
+    !
+>>>>>>> 11188bf03c08b1f94ab5cee4b091c0e92deff348
 }
