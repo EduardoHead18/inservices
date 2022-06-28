@@ -11,7 +11,7 @@ $varImagen = $row['imagen'];
 
 
   mysqli_query($link,"UPDATE productos set nombre='$varNombre', modelo='$varModelo', descripcion='$varDescripcion'
-                precio='$varPrecio', imagen='$varImagen'   where id_pro='$id_pro'"); 
+                precio='$varPrecio', imagen='$varImagen' where id='$id_pro'"); 
 echo "
                 <script language='JavaScript'>
                 alert('Datos Modificados...');

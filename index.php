@@ -37,7 +37,7 @@
   <!--responsive.css-->
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style_propio.css">
   <title>Inservices</title>
 </head>
 
@@ -52,7 +52,7 @@
     </div>
     <span class="close-box-collapse right-boxed bi bi-x"></span>
     <div class="box-collapse-wrap form">
-      <form class="form-a" method="POST" action="">
+      <form class="form-a" method="POST" action="index.php">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
@@ -71,16 +71,16 @@
   <?php
   require_once("db/conexion.php");
   //buscador 
-  //error en el link
   if (isset($_POST['enviar'])) {
     $busqueda = $_POST['busqueda'];
-    $consulta = mysqli_query($link, "SELECT * FROM productos WHERE nombre LIKE '%busqueda%'");
+    $consulta = mysqli_query($link, "SELECT * FROM productos WHERE nombre LIKE '%$busqueda%' ");
 
     echo "
- <div class='contenido'>
- <div class='row row-cols-1 row-cols-md-3 g-4'>
+    <div class='contenido'>
+    <div class='alert alert-info' role='alert'> Productos encontrados</div>
+    <div class='row row-cols-1 row-cols-md-3 g-4'>
 
- ";
+    ";
 
     while (($row = mysqli_fetch_array($consulta)) != NULL) {
       $id_pro = $row['id'];
@@ -93,6 +93,7 @@
 
       //estructura de imagenes
       //echo '<img src="data:image/jpg;base64,'.base64_encode($varImagen).'"/>';
+
       echo "
    <!--contenido-->
        <div class='col'>
@@ -120,8 +121,6 @@
   }
   ?>
 
-
-
   <!--menu-->
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
@@ -130,17 +129,17 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.php">Inser<span class="color-b-b">vices</span></a>
+      <a class="navbar-brand text-brand" href="index.php">Inser<span class="color-b">vicess</span></a>
 
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link active" href="index.php">Home</a>
+            <a class="nav-link active" href="index.php">Inicio</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="administrador/login.html">prueba</a>
+            <a class="nav-link " href="administrador/login.html">Administrador</a>
           </li>
 
           <li class="nav-item">

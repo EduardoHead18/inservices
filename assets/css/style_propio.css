@@ -1,6 +1,6 @@
 
 .contenido{
-    padding: 7%;
+    padding: 6%;
     margin-top: 8%;
 }
 .contenidoLogin{
@@ -39,6 +39,6 @@ height: 100%;
 
 }
 
-.color-b-b {
-    color: rgb(221, 0, 192) ;
-  }
+.color-b {
+    color: rgb(216, 49, 160) !important;  
+}
