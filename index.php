@@ -229,62 +229,25 @@
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
-      <section class="mb-4">
+      <section class="mb-3">
         <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/inservicestux" role="button"><i class="bi bi-facebook"></i></i></a>
 
         <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/INSERVICES13?t=KIFgi616F98jZ0dxuERd8Q&s=09" role="button"><i class="bi bi-twitter"></i></i></a>
 
         <!-- Google -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://g.page/Inservices?share" role="button"><i class="bi bi-geo-alt"></i></i></a>
 
         <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/inservices_chis?igshid=YmMyMTA2M2Y=" role="button"><i class="bi bi-instagram"></i></i></a>
 
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Whatsapp -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://wa.me/message/GEOWXGOV2QH4D1" role="button"><i class="bi bi-whatsapp"></i></i></a>
 
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
       </section>
       <!-- Section: Social media -->
 
-      <!-- Section: Form -->
-      <section class="">
-        <form action="">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            <!--Grid column-->
-            <div class="col-auto">
-              <p class="pt-2">
-                <strong>Sign up for our newsletter</strong>
-              </p>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-md-5 col-12">
-              <!-- Email input -->
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="form5Example21" class="form-control" />
-                <label class="form-label" for="form5Example21">Email address</label>
-              </div>
-            </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-auto">
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-outline-light mb-4">
-                Subscribe
-              </button>
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
       <!-- Section: Form -->
 
       <!-- Section: Text -->
