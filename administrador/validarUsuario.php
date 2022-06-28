@@ -1,5 +1,5 @@
 <?php
-//include('db/conexion.php');
+include('db/conexion.php');
 $usuario = $_POST['usuario'];
 $contraseña = $_POST['contraseña'];
 session_start();
