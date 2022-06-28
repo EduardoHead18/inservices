@@ -37,7 +37,7 @@
   <!--responsive.css-->
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../assets/css/style_propio.css">
   <title>Inservices</title>
 </head>
 
@@ -83,11 +83,11 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link " href="../index.php">Home</a>
+            <a class="nav-link " href="../index.php">Inicio</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="../productos/formRegistrar.php">prueba</a>
+            <a class="nav-link" href="../productos/formRegistrar.php">Registrar</a>
           </li>
 
           <li class="nav-item">
@@ -162,11 +162,11 @@
             <div class='card-footer'>
               <small class='text-muted'>$varPrecio</small>
             </div>
+            <center>    
+            <a href='modificar.php?id_pro=$id_pro'><button type='button' class='btn btn-primary'>Modificar</button></a>
+            <a onClick='confirmar($id_pro)'><button type='button' class='btn btn-danger'>Eliminar</button></a>
+            </center>
           </div>
-          <center>
-          <a href='modificar.php?id_pro=$id_pro'><button type='button' class='btn btn-primary'>Modificar</button></a>
-          <a onClick='confirmar($id_pro)'><button type='button' class='btn btn-danger'>Eliminar</button></a>
-          </center>
         </div>
 
 

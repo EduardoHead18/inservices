@@ -37,7 +37,7 @@
     <!--responsive.css-->
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/style_propio.css">
     <title>Inservices</title>
 </head>
 
@@ -127,6 +127,7 @@
     $opcion = $_GET['id'];
     $result = mysqli_query($link, "SELECT * FROM productos where id='$opcion'");
     $consulta = mysqli_fetch_array($result);
+
     ?>
 
     <!--contenido-->
@@ -138,16 +139,16 @@
 
             <!--Formularios para registrar-->
 
-            <form action="modificar_productos.php" method="post" id="altaProductoss" enctype="multipart/form-data">
-            <input type="hidden" class="form-control" name="id_pro" id="id_emp" value="<?php echo $consulta['id_pro'];?>"
+            <form action="modificar_productos.php" method="post" id="altaProductos" enctype="multipart/form-data">
+            <input type="hidden" class="form-control" name="id_pro" id="id_pro" value="<?php echo $consulta['id_pro']; ?>"/>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nombre</label>
-                    <input type="text" class="form-control" required name="nombreProducto" id="nombreProducto" value="<?php echo $consulta = ['nombre']; ?>" placeholder="Escriba el nombre del producto...">
+                    <input type="text" class="form-control" required name="nombreProducto" id="nombreProducto" value="<?php echo $consulta['varNombre']; ?>" placeholder="Escriba el nombre del producto...">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Modelo</label>
-                    <input type="text" class="form-control" required name="modeloProducto" id="modeloProducto" placeholder="Escriba el modelo del producto...">
+                    <input type="text" class="form-control" required name="modeloProducto" id="modeloProducto" value="<?php echo $consulta['modelo']; ?>" placeholder="Escriba el modelo del producto...">
                     <br>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descripcion</label>

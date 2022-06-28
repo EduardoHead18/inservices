@@ -37,7 +37,7 @@
   <!--responsive.css-->
   <link rel="stylesheet" href="assets/css/responsive.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../assets/css/style_propio.css">
   <title>Inservices</title>
 </head>
 
@@ -77,17 +77,17 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" >Inser<span class="color-b-b">vices</span></a>
+      <a class="navbar-brand text-brand" >Inser<span class="color-b">vices</span></a>
 
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link " href="../index.php">Home</a>
+            <a class="nav-link " href="../index.php">Inicio</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link active" href="administrador/login.html">prueba</a>
+            <a class="nav-link active" href="administrador/login.html">Registrar</a>
           </li>
 
           <li class="nav-item">
