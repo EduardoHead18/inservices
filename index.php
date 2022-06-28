@@ -77,7 +77,7 @@
 
     echo "
     <div class='contenido'>
-    <div class='H1Contenido'><h1>Productos Encontrados</h1></div>
+    <div class='alert alert-info' role='alert'> Productos encontrados</div>
     <div class='row row-cols-1 row-cols-md-3 g-4'>
 
     ";
