@@ -1,5 +1,5 @@
 <?php
-include('db/conexion.php');
+include('../db/conexion.php');
 $usuario = $_POST['usuario'];
 $contraseña = $_POST['contraseña'];
 session_start();
@@ -11,9 +11,9 @@ $link = mysqli_connect("localhost", "root", "", "inservices");
 $consulta = "SELECT*FROM login where usuario='$usuario' and contraseña='$contraseña'";
 $resultado = mysqli_query($link, $consulta);
 
-$filas = mysqli_num_rows($resultado);
+$data = mysqli_num_rows($resultado);
 
-if ($filas) {
+if ($data) {
 
   header("location:../productos/formRegistrar.php");
 } else {

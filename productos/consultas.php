@@ -163,7 +163,7 @@
               <small class='text-muted'>$varPrecio</small>
             </div>
             <center>    
-            <a href='modificar.php?id_pro=$id_pro'><button type='button' class='btn btn-primary'>Modificar</button></a>
+            <a href='modificar.php?id=$id_pro'><button type='button' class='btn btn-primary'>Modificar</button></a>
             <a onClick='confirmar($id_pro)'><button type='button' class='btn btn-danger'>Eliminar</button></a>
             </center>
           </div>
@@ -189,7 +189,7 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
-  <script src="../assets/javascript/funciones.js"></script>
+  <script src="../assets/js/funciones.js"></script>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

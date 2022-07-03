@@ -123,11 +123,10 @@
 
     <!--consultas php-->
     <?php
-    require_once("../db/conexion.php");
-    $opcion = $_GET['id'];
-    $result = mysqli_query($link, "SELECT * FROM productos where id='$opcion'");
-    $consulta = mysqli_fetch_array($result);
-
+        require_once("../db/conexion.php");
+        $opcion = $_GET['id'];
+        $result = mysqli_query($link, "SELECT * FROM productos where id='$opcion'");
+        $consulta = mysqli_fetch_array($result);
     ?>
 
     <!--contenido-->
@@ -139,25 +138,25 @@
 
             <!--Formularios para registrar-->
 
-            <form action="modificar_productos.php" method="post" id="altaProductos" enctype="multipart/form-data">
-            <input type="hidden" class="form-control" name="id_pro" id="id_pro" value="<?php echo $consulta['id_pro']; ?>"/>
+        <form action="modificar_productos.php" method="POST" id="altaProductos" enctype="multipart/form-data">
+            <input type="hidden" class="form-control" name="id" id="id" value="<?php echo $consulta['id']; ?>"/>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nombre</label>
-                    <input type="text" class="form-control" required name="nombreProducto" id="nombreProducto" value="<?php echo $consulta['varNombre']; ?>" placeholder="Escriba el nombre del producto...">
+                    <input type="text" class="form-control" required name="nombre" id="nombre" value="<?php echo $consulta['nombre'];?>">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Modelo</label>
-                    <input type="text" class="form-control" required name="modeloProducto" id="modeloProducto" value="<?php echo $consulta['modelo']; ?>" placeholder="Escriba el modelo del producto...">
+                    <input type="text" class="form-control" required name="modelo" id="modelo" value="<?php echo $consulta['modelo'];?>">
                     <br>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descripcion</label>
-                        <textarea class="form-control" required name="descripcionProducto" id="descripcionProducto" rows="3"></textarea>
+                        <input type="text" size="40%" class="form-control" required name="descripcion" id="descripcion"  value="<?php echo $consulta['nombre']; ?>"></input>
                     </div>
                     <br>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Precio</label>
-                        <input type="number" class="form-control" required name="precioProducto" id="precioProducto" placeholder="Escriba el precio del producto...">
+                        <input type="int" class="form-control" required name="precio" id="precio" value="<?php echo $consulta['precio']; ?>">
                         <br>
                     </div>
                     <br>
@@ -165,16 +164,19 @@
                     <br><br>
                     <form>
                         <div class="form-group">
-                            <input type="file" class="form-control-file" id="imagen" required name="imagen">
+                            <input type="file" class="form-control-file" id="imagen" name="imagen" required>
                         </div>
                     </form>
 
                     <div class="msgError"></div>
                     <br><br>
                     <center>
-                        <button type="submit" class="btn btn-success btn-lg btn-block" value="modificar" onclick="verificar();">Guardar</button>
+                        <button type="submit" class="btn btn-success btn-lg btn-block" value="modificar">Guardar</button>
+                        <a href="consultas.php">
+                        <button type="button" class="btn btn-success btn-lg btn-danger" value="cancelar">Cancelar</button>
+                        </a>
                     </center>
-            </form>
+        </form>
         </div>
     </div>
     </div>

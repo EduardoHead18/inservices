@@ -125,8 +125,9 @@
   <div class="contenido">
     <div class="formRegistro">
       <!--Titulos-->
+      <!--
       <div class="space">
-      </div>
+      </div>-->
 
       <!--Formularios para registrar-->
 

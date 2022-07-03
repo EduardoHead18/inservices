@@ -2,10 +2,9 @@ function confirmar(id_pro){
     confirmar=confirm("¿Deseas eliminar el registro?"); 
     if (confirmar) 
     {
-    document.location="eliminar_productos.php?opcion="+id_pro;
+        document.location="eliminar_productos.php?opcion="+id_pro;
     }
     }
-
 
 function verificar() {
 
