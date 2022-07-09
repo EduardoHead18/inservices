@@ -24,7 +24,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css?2022" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
 
   <!-- Style -->
@@ -139,7 +139,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Acerca de</a>
+            <a class="nav-link" href="vistas/acercade.html">Acerca de</a>
           </li>
 
 
@@ -286,23 +286,18 @@
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <h5 class="text-uppercase">Empresas</h5>
 
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-white">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-white">Link 4</a>
-              </li>
-            </ul>
+            <img src="assets/imagenes/samsung.png" class="rounded mx-auto d-block" alt="..." style="width: 8rem;">
+            <img src="assets/imagenes/lenovo.png" class="rounded mx-auto d-block" alt="..." style="width: 8rem;">
+            <img src="assets/imagenes/bop.png" class="rounded mx-auto d-block" style="width: 8rem;">
+
+          
           </div>
           <!--Grid column-->
-
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            </br>
+            <img src="assets/imagenes/lexmark.png" class="rounded mx-auto d-block" alt="..." style="width: 8rem;">
+            <img src="assets/imagenes/hp.png" class="rounded mx-auto d-block" alt="..." style="width: 8rem;">
+          </div>
           <!--Grid column-->
           <!--Grid column-->
         </div>

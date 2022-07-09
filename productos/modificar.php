@@ -151,7 +151,7 @@
                     <br>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descripcion</label>
-                        <input type="text" size="40%" class="form-control" required name="descripcion" id="descripcion"  value="<?php echo $consulta['nombre']; ?>"></input>
+                        <input type="text" class="form-control" required name="descripcion" id="descripcion"  value="<?php echo $consulta['nombre']; ?>"></input>
                     </div>
                     <br>
                     <div class="form-group">
