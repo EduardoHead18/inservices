@@ -255,13 +255,10 @@
                 <a href="index.php" class="text-white">Inicio</a>
               </li>
               <li>
-                <a href="#!" class="text-white">Acerca de</a>
+                <a href="vistas/acercade.html" class="text-white">Acerca de</a>
               </li>
               <li>
                 <a href="vistas/contacto.html" class="text-white">Contacto</a>
-              </li>
-              <li>
-                <a href="administrador/login.html" class="text-white">Administrador</a>
               </li>
             </ul>
           </div>
@@ -309,16 +306,13 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      © 2022 Inservices. Derechos reservados.
     </div>
     <!-- Copyright -->
   </footer>
   <!-- Footer -->
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

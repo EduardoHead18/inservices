@@ -39,12 +39,6 @@ height: 100%;
 
 }
 
-.color-b {
-    color: rgb(94, 49, 216) !important;  
-
-    color: rgb(216, 49, 160) !important;  
-}
-
 .btn.btn-b-n {
     background-color: #15b0e4 !important;
     color: #ffffff;
@@ -54,3 +48,34 @@ height: 100%;
 #descripcion{
     width: 100%;
 }
+.color-b {
+    color: #15b0e4 !important;
+}
+.navbar-default.navbar-trans .nav-link:before {
+    background-color: #15b0e4 !important;
+}
+.navbar-default.navbar-reduce .nav-link:before {
+    background-color: #15b0e4 !important;
+}
+.map iframe{
+    width: 100%;
+    height: 50%;
+}
+
+.btn.btn-b {
+    background-color: #15b0e4 !important;
+    color: #000000;
+}
+
+@media (min-width: 768px){
+.navbar-default .dropdown .dropdown-menu {
+    border-top: 4px solid #15b0e4 !important;
+}
+}
+.dropdown-item:hover{
+    color: #15b0e4 !important;
+}
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

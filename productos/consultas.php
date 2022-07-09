@@ -42,7 +42,7 @@
 </head>
 
 <body>
-  <!--menu-->
+ <!--menu-->
   <!-- ======= Property Search Section ======= -->
   <div class="click-closed"></div>
   <!--/ Form Search Star /-->
@@ -52,21 +52,74 @@
     </div>
     <span class="close-box-collapse right-boxed bi bi-x"></span>
     <div class="box-collapse-wrap form">
-      <form class="form-a">
+      <form class="form-a" method="POST" action="consultas.php">
         <div class="row">
           <div class="col-md-12 mb-2">
             <div class="form-group">
               <label class="pb-2" for="Type">Escriba que desea buscar</label>
-              <input type="text" class="form-control form-control-lg form-control-a" placeholder="buscar...">
+              <input type="text" name="busqueda" class="form-control form-control-lg form-control-a" placeholder="buscar...">
             </div>
           </div>
           <div class="col-md-12">
-            <button type="submit" class="btn btn-b" name="">Buscar</button>
+            <button type="submit" class="btn btn-b" name="enviar">Buscar</button>
           </div>
         </div>
       </form>
     </div>
   </div><!-- End Property Search Section -->
+
+  <?php
+  require_once("../db/conexion.php");
+  //buscador 
+  if (isset($_POST['enviar'])) {
+    $busqueda = $_POST['busqueda'];
+    $consulta = mysqli_query($link, "SELECT * FROM productos WHERE nombre LIKE '%$busqueda%' ");
+
+    echo "
+    <div class='contenido'>
+    <div class='alert alert-info' role='alert'> Productos encontrados</div>
+    <div class='row row-cols-1 row-cols-md-3 g-4'>
+
+    ";
+
+    while (($row = mysqli_fetch_array($consulta)) != NULL) {
+      $id_pro = $row['id'];
+      $varNombre = $row['nombre'];
+      $varModelo = $row['modelo'];
+      $varDescripcion = $row['descripcion'];
+      $varPrecio = $row['precio'];
+      $varImagen = $row['imagen'];
+      //data:image/jpg;img,echo img_encode($varImagen);
+
+      //estructura de imagenes
+      //echo '<img src="data:image/jpg;base64,'.base64_encode($varImagen).'"/>';
+
+      echo "
+   <!--contenido-->
+       <div class='col'>
+         <div class='card h-100'>
+           <img src= 'data:image/jpg;base64," . base64_encode($varImagen) . "' class='card-img-top'>
+           <div class='card-body'>
+             <h5 class='card-title'>$varNombre</h5>
+             <p class='card-text'>$varModelo</p>
+             <p class='card-text'>$varDescripcion</p>
+           </div>
+           <div class='card-footer'>
+             <small class='text-muted'>$varPrecio</small>
+           </div>
+         </div>
+       </div>
+   ";
+    }
+
+    echo "
+ </div>
+ </div>
+ ";
+  } else {
+
+  }
+  ?>
 
 
   <!--menu-->
@@ -92,23 +145,6 @@
 
           <li class="nav-item">
             <a class="nav-link active" href="property-grid.html">Consultar</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link " href="blog-grid.html">Blog</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item " href="property-single.html">Property Single</a>
-              <a class="dropdown-item " href="blog-single.html">Blog Single</a>
-              <a class="dropdown-item " href="agents-grid.html">Agents Grid</a>
-              <a class="dropdown-item " href="agent-single.html">Agent Single</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
